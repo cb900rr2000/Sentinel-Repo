@@ -1,12 +1,17 @@
 # Analytics Rules build and deploy pipeline
 # This pipeline publishes the rules file as an artifact and then uses a powershell task to deploy
 
-name: build and deploy Alert Rules
+name: ITC test deploy Alert Rules
 resources:
  pipelines:
    - pipeline: Scripts
      source: 'scriptsCI'
 trigger:
+ branches: 
+   include:
+   - development
+   exclude:
+   - master
  paths:
    include:
      - AnalyticsRules/*
@@ -38,14 +43,14 @@ stages:
           PathtoPublish: '$(Pipeline.Workspace)'
           ArtifactName: RulesFile
 
-- stage: deploy_alert_rules
+- stage: deploy_DEV_ITCsecure
   jobs:
     - job: AgentJob
       pool:
        name: Azure Pipelines
        vmImage: 'windows-2019'
       variables: 
-      - group: Az connection settings
+      - group: ITC SECURE
       steps:
       - download: current
         artifact: RulesFile
@@ -54,7 +59,7 @@ stages:
       - task: AzurePowerShell@4
         displayName: 'Create and Update Alert Rules'
         inputs:
-         azureSubscription: 'Soricloud Visual Studio'
+         azureSubscription: 'Dev Sentinel Alert and Incident'
          ScriptPath: '$(Pipeline.Workspace)/Scripts/Scripts/CreateAnalyticsRules.ps1'
          ScriptArguments: '-Workspace $(Workspace) -RulesFile analytics-rules.json'
          azurePowerShellVersion: LatestVersion
