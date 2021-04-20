@@ -48,16 +48,16 @@ stages:
        name: Azure Pipelines
        vmImage: 'windows-2019'
       variables: 
-      - group: Az connection settings
+      - group: ITC SECURE
       steps:
       - download: current
         artifact: Playbooks
       - download: Scripts
         patterns: '*.ps1'
       - task: AzurePowerShell@4
-        displayName: 'Create and Update Playbooks'
+        displayName: 'Dev Sentinel Alert and Incident'
         inputs:
-         azureSubscription: 'Soricloud Visual Studio'
+         azureSubscription: ''
          ScriptPath: '$(Pipeline.Workspace)/Scripts/Scripts/CreatePlaybooks.ps1'
          ScriptArguments: '-resourceGroup $(ResourceGroup) -PlaybooksFolder $(Pipeline.Workspace)/Playbooks'
          azurePowerShellVersion: LatestVersion
