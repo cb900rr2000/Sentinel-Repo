@@ -1,26 +1,43 @@
-.
 |
-|- contoso/  ________________________ # Root folder for customer
-|  |- AnalyticsRules/  ______________________ # Subfolder for Analytics Rules
-|     |- analytics-rules.json _________________ # Analytics Rules definition file (JSON)
+|- ITC-Secure / ________________________________ # root folder 
+|   |- NonCommonAlertRules ___________________________ # Subfolder for non common Alert Rules
+|       |- AnalyticsRules / ________________________________ # Subfolder for Analytics Rules
+|           |- Coller-Capital / ________________________________ # Customer Folder 
+|               |- analytics-rules.json _____________________________ # Analytics Rules definition file (JSON)
+|           |- Mizuho-International _____________________________# Customer Folder
+|               |- analytics-rules.json _____________________________ # Analytics Rules definition file (JSON)
+|           |- DAC-Beachcroft ___________________________________# Customer Folder
+|               |- analytics-rules.json _____________________________ # Analytics Rules definition file (JSON)
+|           |- Gov-of-Jersey  ___________________________________ # Customer Folder
+|               |- analytics-rules.json _____________________________ # Analytics Rules definition file (JSON)
+|           |- Park-Square-Capital ______________________________ # Customer Folder
+|               |- analytics-rules.json _____________________________ # Analytics Rules definition file (JSON)
+|           |- 3i-Group _________________________________________ # Customer Folder
+|               |- analytics-rules.json _____________________________ # Analytics Rules definition file (JSON)  
+|           |- C5-Capital _______________________________________ # Customer Folder
+|               |- analytics-rules.json _____________________________ # Analytics Rules definition file (JSON)
+|           |- Essentra _________________________________________ # Customer Folder
+|               |- analytics-rules.json _____________________________ # Analytics Rules definition file (JSON)
+|           |- Oxera-Consulting _________________________________ # Customer Folder
+|               |- analytics-rules.json _____________________________ # Analytics Rules definition file (JSON)
+|           |- Doctors-Laboratory _______________________________ # Customer Folder
+|               |- analytics-rules.json _____________________________ # Analytics Rules definition file (JSON)
+|           |- ITC-Secure _______________________________________ # Customer Folder
+|               |- analytics-rules.json _____________________________ # Analytics Rules definition file (JSON)
+|           |- Annington ________________________________________ # Customer Folder
+|               |- analytics-rules.json _____________________________ # Analytics Rules definition file (JSON)
 |
-|  |- Connectors/  ______________________ # Subfolder for Connectors
-|     |- connectors.json _________________ # Connectors definition file (JSON)
+|   |- CommonAlertRules ____________________________ # Subfolder for common Alert Rules
+|       |- analytics-rules.json _____________________________ # Analytics Rules definition file (JSON)
+|             
+|   |- Onboard/  __________________________________________# Subfolder for Onboarding
+|       |- onboarding.json _____________________________________ # Onboarding definition file (JSON)
 |
-|  |- HuntingRules/ _____________________ # 
-|     |- hunting-rules.json _______________ # Hunting Rules definition file (JSON)
+|   |- Pipelines/ ________________________________________ # Subfolder for Pipelines 
+|       |- pipeline.yml ________________________________________ # Pipeline definition files (YAML)
 |
-|  |- Onboard/  ______________________ # Subfolder for Onboarding
-|     |- onboarding.json _________________ # Onboarding definition file (JSON)
+|   |- Playbooks/  _______________________________________ # Subfolder for Playbooks
+|       |- playbook.json _______________________________________ # Playbooks definition files (ARM)
 |
-|  |- Pipelines/ _____________________ # Subfolder for Pipelines 
-|     |- pipeline.yml _______________ # Pipeline definition files (YAML)
-|
-|  |- Playbooks/  ______________________ # Subfolder for Playbooks
-|     |- playbook.json _________________ # Playbooks definition files (ARM)
-|
-|  |- Scripts/ _____________________ # Subfolder for script helpers 
-|     |- CreateAnalyticsRules.ps1 _______________ # Script files
-|
-|  |- Workbooks/  ______________________ # Subfolder for Workbooks
-|     |- workbook-sample.json _________________ # Workbook definiton files (JSON)
+|   |- Scripts/ ___________________________________________# Subfolder for script helpers 
+|       |- CreateAnalyticsRules.ps1 _____________________________# Script files (PowerShell)
