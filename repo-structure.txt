@@ -12,7 +12,7 @@
 |               |- analytics-rules.json _____________________________ # Analytics Rules definition file (JSON)
 |           |- Park-Square-Capital ______________________________ # Customer Folder
 |               |- analytics-rules.json _____________________________ # Analytics Rules definition file (JSON)
-|           |- 3i-Group _________________________________________ # Customer Folder
+|           |- 3i_Group _________________________________________ # Customer Folder
 |               |- analytics-rules.json _____________________________ # Analytics Rules definition file (JSON)  
 |           |- C5-Capital _______________________________________ # Customer Folder
 |               |- analytics-rules.json _____________________________ # Analytics Rules definition file (JSON)
