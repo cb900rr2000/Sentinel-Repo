@@ -30,8 +30,6 @@
 |   |- CommonAlertRules ____________________________ # Subfolder for common Alert Rules
 |       |- analytics-rules.json _____________________________ # Analytics Rules definition file (JSON)
 |             
-|   |- Onboard/  __________________________________________# Subfolder for Onboarding
-|       |- onboarding.json _____________________________________ # Onboarding definition file (JSON)
 |
 |   |- Pipelines/ ________________________________________ # Subfolder for Pipelines 
 |       |- pipeline.yml ________________________________________ # Pipeline definition files (YAML)
